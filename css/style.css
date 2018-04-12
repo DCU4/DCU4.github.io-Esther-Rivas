@@ -5,6 +5,7 @@
 /*Universal*/
 
 html {
+	height:100%;
 	font-size: 16pt;
 	text-transform: uppercase;
 	font-family: 'Josefin Sans',sans-serif;
@@ -12,6 +13,13 @@ html {
 
 body {
 	background: #EEE;
+	color:#444;
+	height: 100%;
+}
+
+a {
+	color: #444;
+	text-decoration: none;
 }
 
 /*Header*/ 
@@ -27,7 +35,7 @@ header {
 
 .title {	
 	color: #444;
-	margin-left: 1.5%;
+	margin: 1.5%;
 	font-size: 1.5rem;
 	font-weight: 800;	
 }
@@ -65,6 +73,7 @@ header {
 
 .menu-item {
 	list-style-type: none;
+	visibility:hidden;
 	display: inline;
 	font-size: .75rem;
 	font-weight: 300;
@@ -73,17 +82,12 @@ header {
 	transition: all 1s;
 }
 
-.menu-item a {
-	color: #444;
-	text-decoration: none;
-}
-
 
 .menu-open {
-	opacity: 1;	
-	
+	opacity: 1;
+	visibility: visible;
+		
 }
-
 
 
 hr {
@@ -92,9 +96,7 @@ hr {
 	height:4px;
 	background: #444;
 	margin: 0 1.5%;
-
 }
-
 
 
 /*Main*/
@@ -166,29 +168,48 @@ span {
 /*Overlay*/
 
 .cover {
-	position: absolute;
+	/*position: absolute;
 	top:0;
 	left:0;
 	width:100%;
-	height:1500px;
+	height: 100%
 	background:rgba(0,0,0,.5);
-	display: none;
+	display: none;*/
+
+	overflow-y: auto;
+  	overflow-x: hidden;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+ 	bottom: 0;
+ 	background: rgba(0, 0, 0, .5);
+ 	display:none;
+ 	opacity: 1;
 }
 
 .inside-cover {
 	background:#FFF;
-	width:60%;
-	height:60%;
+	width:80%;
+	height:90%;
 	margin:auto;
 	color: #444;
 	position: relative;
+}
 
+.inside-cover-items {
+	width:auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .inside-cover p {
 	/*position: absolute;*/
 	text-align: center;
 	padding: 12px;
+
 }
 
 .cover .inside-cover .exit {
@@ -213,4 +234,73 @@ span {
 .exit-2 {
 	transform: rotate(45deg) translate(-2px, 2px);
 }
+
+
+
+
+
+@supports (display: flex) {
+  @media only screen and (max-width: 480px), (orientation: portrait) {
+
+*{
+	/*border:1pt black solid;*/
+}
+
+header {
+	height:50px;
+	max-width:480px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 6% 0;
+	
+}
+
+
+.images {
+	display: flex;
+ 	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+img {
+	max-width:250px;
+	height: 250px;
+}
+
+hr {
+	display: none;
+}
+
+.menu-wrapper {
+	margin: 0 1.5%;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.menu-item {
+
+	font-size: .75rem;
+	margin:0 5px;
+
+}
+
+.inside-cover {
+	background:#FFF;
+	width:90%;
+	
+	margin:auto;
+	color: #444;
+	position: relative;
+
+}
+
+
+}
+}
+
 
