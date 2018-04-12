@@ -283,16 +283,14 @@ hr {
 }
 
 .menu-item {
-
 	font-size: .75rem;
-	margin:0 5px;
+	margin:0px 10px;
+	display: block;
 
 }
 
-.inside-cover {
-	background:#FFF;
-	width:90%;
-	
+.inside-cover {	
+	width:90%;	
 	margin:auto;
 	color: #444;
 	position: relative;
