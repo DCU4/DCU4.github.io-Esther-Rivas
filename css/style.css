@@ -290,7 +290,8 @@ hr {
 }
 
 .inside-cover {	
-	width:90%;	
+	width:90%;
+	height:100%;
 	margin:auto;
 	color: #444;
 	position: relative;
