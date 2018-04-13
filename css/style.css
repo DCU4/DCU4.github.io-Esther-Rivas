@@ -1,5 +1,5 @@
 *{
-	/*border: 1pt black solid;*/
+/*	border: 1pt black solid;*/
 }
 
 /*Universal*/
@@ -15,11 +15,16 @@ body {
 	background: #EEE;
 	color:#444;
 	height: 100%;
+	opacity: 0;
 }
 
 a {
 	color: #444;
 	text-decoration: none;
+}
+
+a:not(.title-tag):hover {
+	text-decoration: underline;
 }
 
 /*Header*/ 
@@ -37,7 +42,12 @@ header {
 	color: #444;
 	margin: 1.5%;
 	font-size: 1.5rem;
-	font-weight: 800;	
+	font-weight: 800;
+		
+}
+
+.title-tag {
+	text-decoration: none;
 }
 
 .menu-wrapper {
@@ -69,6 +79,9 @@ header {
 
 .menu {
 	display: inline;
+	margin-right: 20px;
+
+
 }
 
 .menu-item {
@@ -80,15 +93,14 @@ header {
 	margin:0 10px;
 	opacity: 0;
 	transition: all 1s;
+
 }
 
 
 .menu-open {
 	opacity: 1;
-	visibility: visible;
-		
+	visibility: visible;		
 }
-
 
 hr {
 	width:98.5%;
@@ -106,26 +118,28 @@ hr {
  	flex-flow: row wrap;
 	justify-content: space-evenly;
 	align-items: center;*/
-	
+	margin: 1.5%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	justify-content: center;
-	justify-items:center;
-	margin-top: 3%;
+	
 }
 
 img {
 	border:8px #FFF solid;
-	max-width:300px;
-	height: 300px;
 	box-shadow: 0px 1px .5px .25px #DDD;
+	width:100%;
+	height:auto;
+	display:block;
 }
 
 .image-container {
 	position: relative;
-	margin:3% 1.5%;
+	margin:6%;
 	opacity:0; /*For JS*/
+	max-width:300px;
+	height: 300px;
 }
 
 .image-container .after {
@@ -212,6 +226,12 @@ span {
 
 }
 
+.inside-cover-image {
+	max-width:300px;
+	height: 300px;
+}
+
+/*Exit Button*/
 .cover .inside-cover .exit {
 	position: absolute;
 	right: 0;
@@ -236,8 +256,25 @@ span {
 }
 
 
+/*Footer*/
+
+footer {
+	width: 100%;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+
+}
+
+footer p {
+	margin: 6%;
+}
 
 
+
+
+
+/*Mobile*/
 
 @supports (display: flex) {
   @media only screen and (max-width: 480px), (orientation: portrait) {
@@ -283,16 +320,14 @@ hr {
 }
 
 .menu-item {
-
 	font-size: .75rem;
-	margin:0 5px;
-
+	margin:0px 10px;
+	display: block;
 }
 
 .inside-cover {
-	background:#FFF;
 	width:90%;
-	
+	height:100%;
 	margin:auto;
 	color: #444;
 	position: relative;

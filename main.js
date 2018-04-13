@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(".image-container").each(function(index) {
+	$(".image-container, body").each(function(index) {
     $(this).animate({
     	opacity:1
     }, (index+1)*400 );
