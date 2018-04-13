@@ -323,9 +323,16 @@ hr {
 	font-size: .75rem;
 	margin:0px 10px;
 	display: block;
+<<<<<<< HEAD
 }
 
 .inside-cover {
+=======
+
+}
+
+.inside-cover {	
+>>>>>>> 0c78cfe560954a7ba98d97b8460a6d579d64aa20
 	width:90%;
 	height:100%;
 	margin:auto;
