@@ -1,0 +1,32 @@
+svg {
+	position: fixed;
+}
+
+svg > g {
+	opacity: 0;
+	right:0;
+	bottom: 0;
+	z-index: 1;
+
+}
+
+/*
+#sunset {
+
+}
+
+#wavy {
+
+}
+
+#greenblue {
+
+}
+
+#pink {
+
+}
+
+#trees {
+
+}*/
