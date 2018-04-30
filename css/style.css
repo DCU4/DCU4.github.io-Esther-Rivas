@@ -15,7 +15,6 @@ body {
 	background: #EEE;
 	color:#444;
 	height: 100%;
-	opacity: 0;
 }
 
 a {
@@ -30,6 +29,7 @@ a:not(.title-tag):hover {
 .wrapper {
 	position: relative;
 	z-index: 10;
+	opacity:0;
 }
 
 
