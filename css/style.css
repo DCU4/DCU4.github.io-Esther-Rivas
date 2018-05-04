@@ -15,10 +15,8 @@ body {
 	background: #EEE;
 	color:#444;
 	height: 100%;
-<<<<<<< HEAD
 	/*opacity: 0;*/
-=======
->>>>>>> 9a17a6f8e6e378093e7054cae215a73318b776a4
+
 }
 
 a {
@@ -33,12 +31,9 @@ a:not(.title-tag):hover {
 .wrapper {
 	position: relative;
 	z-index: 10;
-<<<<<<< HEAD
 	opacity: 0;
-	/*display: none;*/
-=======
-	opacity:0;
->>>>>>> 9a17a6f8e6e378093e7054cae215a73318b776a4
+
+
 }
 
 
