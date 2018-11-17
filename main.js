@@ -37,7 +37,6 @@ $(document).ready(function(){
 
 	$('img').on('click',function(){
 		var newSource = $(this).attr('src');
-		// alert(newSource);
 		$('.inside-cover-image').attr('src', newSource);
 	});
 	
